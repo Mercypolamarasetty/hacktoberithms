@@ -1,0 +1,26 @@
+"""Challenge
+Write a function that satisfies the following rules:
+
+Return true if the string in the first element of the list contains all of the letters of the string in the second element of the list.
+examples
+["hello", "Hello"]
+
+should return true because all of the letters in the second string are present in the first, ignoring case.
+["hello", "hey"]
+
+should return false because the string "hello" does not contain a "y".
+["Alien", "line"]
+
+should return true because all of the letters in "line" are present in "Alien". """
+
+
+str1=input()                              # Enter a first string
+str2=input().casefold()                   # enter second string
+flag=0                                    # initialize zero to flag variable
+for i in range(len(str2)):                # Iterate the loop upto length of the string 
+        if str2[i] not in str1:           # check the character is existing in first string or not
+            flag=1                        # if it's existing put flag to one
+if flag==0:                               # checking flag status
+    print(True)                           # if it's zero print True
+else: 
+    print(False)                          # if it's one print False
